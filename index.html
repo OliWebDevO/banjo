@@ -1,0 +1,42 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>💘 Banjo - Cette fois, cupidon va pas vous loupay 💘</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3379e155de.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/styles.min.css">
+    </head>
+    <body>
+    <div class="wrapper">
+        <img src="img/logo.png" alt="" class="logo">
+        <div class="deco">
+        <i class="fa-solid fa-heart"></i>
+        <div class="circle"></div>
+        </div>
+        <p><strong>💕 À la recherche de l'amour ? 💕</strong><br>Découvrez notre tout nouveau site de rencontre conçu spécialement pour les célibataires à la recherche d'une relation sérieuse et durable. Que vous soyez à la recherche de votre âme sœur ou simplement désireux de rencontrer de nouvelles personnes intéressantes, notre plateforme est là pour vous aider à établir des connexions significatives. Avec une approche moderne et conviviale, notre site de rencontre offre une expérience unique, où la compatibilité et les intérêts communs sont au cœur de notre algorithme de mise en relation. Vous pourrez explorer des profils authentiques, discuter en toute sécurité et construire des relations solides. Ne laissez pas la chance passer, rejoignez notre communauté grandissante de célibataires motivés et commencez votre voyage vers une belle histoire d'amour. Trouvez votre partenaire idéal sur notre nouveau site de rencontre dès aujourd'hui !</p>
+        <div id="app">
+        <div class="users">
+            <h2>💖 Discover Us 💖</h2>
+            <div class="users-pics">
+            <img :src="utilisateur.image" :alt="utilisateur.name" v-for="(utilisateur, index) in users" @click="afficheProfil(utilisateur)" >
+            </div>
+        </div>
+        <div class="user-details" v-if="activeUser">
+            <img :src="activeUser.image" alt="">
+            <h2></h2>
+            <div class="age"></div>
+            <a class="contact" :href="'mailto:'+activeUser.email" :title="'Envoyez un email à ' + activeUser.name"></a>
+            <div class="address">
+            
+            </div>
+        </div>
+        <div v-else></div>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="scripts/main.js"></script>
+    </body>
+    </html>

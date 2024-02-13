@@ -1,0 +1,56 @@
+.wrapper {
+    width: 90%;
+    margin: 50px auto;
+}
+.logo {
+    width: 500px;
+    margin: 0 auto;
+    display: block;
+}
+.fa-heart {
+    color: #ff667d;
+    font-size: 100px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    transform: rotate(-45deg);
+}
+.circle {
+    background: #55f8eb;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+p {
+    font-size: .85rem;
+    line-height: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+#app {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.user-details {
+    text-align: center;
+    margin-top: 100px;
+    transition: ease-in-out 0.5s;
+    img {
+        transition: ease-in-out 0.5s;
+    }
+}
+img {
+    border-radius: 8px 16px 8px 16px;
+    transition: ease-in-out 0.5s;
+    cursor: pointer;
+    &:hover {
+        transition: ease-in-out 0.5s;
+        scale: 1.2;
+    }
+}
